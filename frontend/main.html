@@ -1,30 +1,78 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
     <title>Skolwayn</title>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Регистрация</h2>
+
+    <div class="wrapper">
         <form>
-            <div class="container group">
+            <h2>Регистрация</h2>
+
+            <div class="container-group">
                 <label for="username">Имя пользователя</label>
-                <input type="text" id="username" placeholder="" required>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                >
             </div>
-            <div class="container group">
-                <label for="">Введите почту</label>
-                <input type="email" id="email" placeholder="example@ww.ru" required>
+
+            <div class="container-group">
+                <label for="email">Введите почту</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@ww.ru"
+                    required
+                >
             </div>
-            <div class="container group">
+
+            <div class="container-group">
                 <label for="password">Введите пароль</label>
-                <input type="password" id="password" placeholder="" required>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                >
             </div>
-            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+
+            <div class="remember">
+                <label>
+                    <input type="checkbox" name="remember">
+                    Запомнить меня
+                </label>
+
+                <a href="#">Забыли пароль?</a>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Зарегистрироваться
+            </button>
+
+            <div class="register-link">
+                <p>Нет аккаунта?</p>
+                <a href="#">Регистрация</a>
+            </div>
         </form>
     </div>
-</body>
 
+</body>
 </html>
+```
