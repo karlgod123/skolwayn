@@ -1,19 +1,30 @@
 from fastapi import FastAPI, HTTPException
 import uvicorn
 from pydantic import BaseModel, EmailStr, Field, ConfigDict
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# 👇 второй порт открыл для себя
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://127.0.0.1:5500"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 dataBase = []
+
 
 @app.get('/basedata',
          tags=['База данных'],
-         summary='Получить всех пользователей'
-         )
+         summary='Получить всех пользователей')
 def show_data():
     return dataBase
 
-@app.get('/correct_data{index}',
+
+@app.get('/correct_data/{index}',
          tags=['База данных'],
          summary='Получить конкретного пользователя по индексу')
 def show_correct_data(index: int):
@@ -22,20 +33,23 @@ def show_correct_data(index: int):
     except:
         raise HTTPException(status_code=404, detail='Пользователь не найден')
 
+
 class NewUser(BaseModel):
     username: str = Field(
         min_length=1,
         max_length=15,
-        pattern= r'^[a-zA-Z0-9_а-яА-Я]+$'#r'^[a-zA-Z0-9_]+$'#Только латиница, цифры, _
+        pattern=r'^[a-zA-Z0-9_а-яА-Я]+$'
     )
     mail: EmailStr
     password: str = Field(min_length=6)
+
     model_config = ConfigDict(extra='forbid')
+
 
 @app.post("/add_user")
 def add_user(new_user: NewUser):
     if any(u['username'] == new_user.username for u in dataBase):
-        raise HTTPException(400, "Данный пользователь уже зарегестрирован!")
+        raise HTTPException(400, "Данный пользователь уже зарегистрирован!")
 
     if any(u['mail'] == new_user.mail for u in dataBase):
         raise HTTPException(400, "Данная почта уже используется другим пользователем!")
@@ -46,9 +60,13 @@ def add_user(new_user: NewUser):
         'mail': new_user.mail,
         'password': new_user.password
     }
+
     dataBase.append(user_data)
-    return {'success': True, "message": 'Пользователь успешно добавлен!'}
-    #raise HTTPException(status_code=400 , detail='Убедитесь в правильности введенных данных')
+
+    return {
+        'success': True,
+        "message": 'Пользователь успешно добавлен!'
+    }
 
 
 if __name__ == "__main__":
