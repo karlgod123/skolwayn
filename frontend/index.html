@@ -9,74 +9,113 @@
     <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./app.js"></script>
-    <!-- <script src="/frontend/src/api.js" defer></script> -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
-    
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    <title>Skolwayn</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Skolwayn — Регистрация</title>
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <form id="registerForm">
-            <h2>Регистрация</h2>
+    <!-- Анимированный фон -->
+    <canvas id="painting"></canvas>
 
-    <div class="container-group">
-                <label for="username">Имя пользователя</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    required
-                >
+    <!-- Затемнение фона -->
+    <div class="background-overlay"></div>
+
+    <main class="page">
+
+        <div class="wrapper">
+
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span>Skolwayn</span>
             </div>
 
-            <div class="container-group">
-                <label for="email">Введите почту</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="example@ww.ru"
-                    required
-                >
+            <form id="registerForm">
+
+                <div class="form-header">
+                    <h1>Создайте аккаунт</h1>
+                    <p>Начните обучение прямо сейчас</p>
+                </div>
+
+                <p id="message"></p>
+
+                <div class="container-group">
+                    <label for="username">Имя пользователя</label>
+
+                    <div class="input-box">
+                        <i class="bx bx-user"></i>
+                        <input type="text" id="username" name="username" placeholder="Введите имя пользователя" required>
+                    </div>
+                </div>
+
+                <div class="container-group">
+                    <label for="email">Электронная почта</label>
+
+                    <div class="input-box">
+                        <i class="bx bx-envelope"></i>
+
+                        <input type="email" id="email" name="email" placeholder="example@mail.ru"  >
+                    </div>
+                </div>
+
+                <div class="container-group">
+                    <label for="password">Пароль</label>
+
+                    <div class="input-box">
+                        <i class="bx bx-lock"></i>
+
+                        <input type="password" id="password" name="password" placeholder="Пароль" required>
+                        <button type="button" class="password-toggle" id="passwordToggle" aria-label="Показать пароль">
+                            👁
+                        </button>
+                    </div>
+                </div>
+
+                <div class="remember">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        <span>Запомнить меня</span>
+                    </label>
+
+                     <a href="#">Забыли пароль?</a>
+                </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Создать аккаунт</span>
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+
+                <div class="divider">
+                    <span>или</span>
+                </div>
+
+                <div class="register-link">
+                    <p>Уже есть аккаунт?</p>
+                    <a href="#">Войти</a>
+                </div>
+
+            </form>
+
+            <div class="footer-text">
+                Продолжая, вы соглашаетесь с условиями использования
             </div>
 
-            <div class="container-group">
-                <label for="password">Введите пароль</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    required
-                >
-            </div>
+        </div>
+    </main>
 
-            <div class="remember">
-                <label>
-                    <input type="checkbox" name="remember">
-                    Запомнить меня
-                </label>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-                <a href="#">Забыли пароль?</a>
-            </div>
+    <!-- JS -->
+    <script type="module" src="./app.js"></script>
 
-            <button type="submit" class="submit-btn">
-                Зарегистрироваться
-            </button>
-
-            <div class="register-link">
-                <p>Нет аккаунта?</p>
-                <a href="#">Регистрация</a>
-            </div>
-        </form>
-    </div>
-
-    
 </body>
 </html>
-
