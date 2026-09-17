@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Skolwayn — онлайн-школа программирования</title>
+</head>
+<body>
+
+<div class="top-strip">
+    <div class="container top-strip-inner">
+        <span>Skolwayn — онлайн-обучение программированию</span>
+        <span class="top-strip-note">Python · JavaScript · Arduino и другие направления</span>
+    </div>
+</div>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="Skolwayn">
+            <span class="brand-icon">S</span>
+            <span>Skolwayn</span>
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Открыть меню">
+            <i class="bx bx-menu"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#courses">Курсы</a>
+            <a href="#format">Как учимся</a>
+            <a href="#teacher">Преподаватель</a>
+            <a href="#faq">Вопросы</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="nav-login" href="./login.html" id="loginLink">Войти</a>
+            <a class="nav-cta" href="./index.html" id="registerLink">Начать обучение</a>
+            <div class="user-pill" id="userPill">
+                <span class="user-avatar" id="userAvatar">U</span>
+                <span id="userName">Пользователь</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="top">
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <span class="kicker">Онлайн-школа программирования</span>
+                <h1>Учись программировать.<br><span>Создавай сам.</span></h1>
+                <p>
+                    Python, JavaScript, Arduino и другие направления — с понятным объяснением,
+                    практикой и поддержкой преподавателя.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#courses">Выбрать направление</a>
+                    <a class="btn btn-secondary" href="#format">Как проходит обучение</a>
+                </div>
+
+                <div class="hero-meta">
+                    <span><i class="bx bx-check"></i> Практические задания</span>
+                    <span><i class="bx bx-check"></i> Живой преподаватель</span>
+                    <span><i class="bx bx-check"></i> Реальные проекты</span>
+                </div>
+            </div>
+
+            <div class="hero-side">
+                <div class="hero-card">
+                    <div class="hero-card-top">
+                        <span class="mini-label">Преподаватель Skolwayn</span>
+                        <span class="online-dot"><span></span> онлайн</span>
+                    </div>
+                    <div class="hero-person">
+                        <img src="./teacher.jpg" alt="Преподаватель Skolwayn">
+                        <div>
+                            <strong>Python + Arduino</strong>
+                            <p>От первой программы до собственного проекта.</p>
+                        </div>
+                    </div>
+                    <div class="hero-tags">
+                        <span>Python</span>
+                        <span>Arduino</span>
+                        <span>Электроника</span>
+                    </div>
+                    <a class="hero-card-link" href="#teacher">Познакомиться с преподавателем <span>→</span></a>
+                </div>
+
+                <div class="hero-note">
+                    <div class="hero-note-icon"><i class="bx bx-code-alt"></i></div>
+                    <div>
+                        <strong>Не только смотрим</strong>
+                        <span>Разбираем → пишем → проверяем → собираем проект</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="container quick-grid">
+            <a class="quick-item" href="#courses">
+                <span class="quick-icon warm"><i class="bx bx-code-alt"></i></span>
+                <span><strong>Изучать языки</strong><small>Python, JavaScript, C++</small></span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </a>
+            <a class="quick-item" href="#format">
+                <span class="quick-icon purple"><i class="bx bx-video"></i></span>
+                <span><strong>Занятия с преподавателем</strong><small>Объяснение и обратная связь</small></span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </a>
+            <a class="quick-item" href="#projects">
+                <span class="quick-icon blue"><i class="bx bx-briefcase-alt-2"></i></span>
+                <span><strong>Реальные проекты</strong><small>Портфолио по ходу обучения</small></span>
+                <i class="bx bx-right-arrow-alt"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <span class="section-label">Направления</span>
+                    <h2>Выберите, чему хотите научиться</h2>
+                    <p>Начните с одного направления, а дальше соберите свой набор технологий.</p>
+                </div>
+                <a href="#courses" class="all-link">Все направления <span>→</span></a>
+            </div>
+
+            <div class="course-grid">
+                <a class="course-card featured" href="#teacher">
+                    <div class="course-top">
+                        <span class="course-badge python">Python</span>
+                        <span class="course-arrow">→</span>
+                    </div>
+                    <h3>Python с нуля</h3>
+                    <p>Синтаксис, логика, функции, работа с данными и первые практические проекты.</p>
+                    <div class="course-footer">
+                        <span>Для начинающих</span>
+                        <span>Практика</span>
+                    </div>
+                </a>
+
+                <a class="course-card" href="#courses">
+                    <div class="course-top">
+                        <span class="course-badge js">JavaScript</span>
+                        <span class="course-arrow">→</span>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Основы языка, DOM, асинхронность, API и база для современного frontend.</p>
+                    <div class="course-footer">
+                        <span>Web</span>
+                        <span>Практика</span>
+                    </div>
+                </a>
+
+                <a class="course-card" href="#courses">
+                    <div class="course-top">
+                        <span class="course-badge react">React</span>
+                        <span class="course-arrow">→</span>
+                    </div>
+                    <h3>React</h3>
+                    <p>Компоненты, состояние, маршрутизация и создание интерфейсов на JavaScript.</p>
+                    <div class="course-footer">
+                        <span>Frontend</span>
+                        <span>Продолжение JS</span>
+                    </div>
+                </a>
+
+                <a class="course-card" href="#courses">
+                    <div class="course-top">
+                        <span class="course-badge arduino">Arduino</span>
+                        <span class="course-arrow">→</span>
+                    </div>
+                    <h3>Arduino</h3>
+                    <p>Основы электроники, датчики, подключение компонентов и первые устройства.</p>
+                    <div class="course-footer">
+                        <span>Hardware</span>
+                        <span>Проекты</span>
+                    </div>
+                </a>
+
+                <a class="course-card" href="#courses">
+                    <div class="course-top">
+                        <span class="course-badge cpp">C++</span>
+                        <span class="course-arrow">→</span>
+                    </div>
+                    <h3>C++ и алгоритмы</h3>
+                    <p>Типы данных, циклы, функции, структуры и алгоритмическое мышление.</p>
+                    <div class="course-footer">
+                        <span>Основы</span>
+                        <span>Алгоритмы</span>
+                    </div>
+                </a>
+
+                <a class="course-card more-card" href="#courses">
+                    <div class="more-card-inner">
+                        <span class="more-plus">+</span>
+                        <h3>Новые направления</h3>
+                        <p>Добавляйте технологии в свой путь обучения по мере роста.</p>
+                    </div>
+                    <span class="course-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section light-panel" id="format">
+        <div class="container">
+            <div class="section-head narrow">
+                <div>
+                    <span class="section-label">Формат обучения</span>
+                    <h2>Понятно, по шагам и без лишней воды</h2>
+                    <p>Каждая тема должна приводить к действию, а не заканчиваться просмотром видео.</p>
+                </div>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span class="step-number">01</span>
+                    <i class="bx bx-book-open"></i>
+                    <h3>Разбираемся</h3>
+                    <p>Получаете объяснение темы и примеры, которые можно сразу повторить.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">02</span>
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Пишем код</h3>
+                    <p>Закрепляете материал собственной практикой и небольшими заданиями.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">03</span>
+                    <i class="bx bx-user-voice"></i>
+                    <h3>Разбираем ошибки</h3>
+                    <p>Получаете обратную связь и понимаете не только «что», но и «почему».</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">04</span>
+                    <i class="bx bx-briefcase-alt-2"></i>
+                    <h3>Собираем проект</h3>
+                    <p>Объединяете навыки в полноценную работу и добавляете её в портфолио.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section project-section" id="projects">
+        <div class="container project-wrap">
+            <div class="project-copy">
+                <span class="section-label">Практика</span>
+                <h2>Учимся через то, что действительно хочется собрать</h2>
+                <p>Вместо длинного списка тем — набор небольших работ, которые постепенно складываются в нормальное портфолио.</p>
+                <div class="project-list">
+                    <div><i class="bx bx-check"></i><span>Python — боты, автоматизация, небольшие приложения</span></div>
+                    <div><i class="bx bx-check"></i><span>JavaScript — интерактивные сайты и работа с API</span></div>
+                    <div><i class="bx bx-check"></i><span>Arduino — датчики, схемы и физические устройства</span></div>
+                </div>
+                <a class="text-button" href="#courses">Посмотреть направления →</a>
+            </div>
+
+            <div class="project-board">
+                <div class="board-topbar">
+                    <span></span><span></span><span></span>
+                    <strong>skolwayn_project.py</strong>
+                </div>
+                <pre><span class="syntax-purple">def</span> <span class="syntax-blue">start_project</span>():
+    lessons = <span class="syntax-orange">4</span>
+    practice = <span class="syntax-orange">8</span>
+    project = <span class="syntax-green">True</span>
+
+    <span class="syntax-blue">return</span> <span class="syntax-orange">"поехали"</span></pre>
+                <div class="board-footer">
+                    <span><i class="bx bx-check-circle"></i> задача выполнена</span>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section teacher-section" id="teacher">
+        <div class="container teacher-wrap">
+            <div class="teacher-photo-wrap">
+                <div class="teacher-caption">Преподаватель · основатель Skolwayn</div>
+                <img src="./teacher.jpg" alt="Преподаватель Skolwayn — Python и Arduino">
+            </div>
+            <div class="teacher-copy">
+                <span class="section-label">Преподаватель</span>
+                <h2>Когда преподаватель рядом, учиться проще</h2>
+                <p>
+                    Основатель Skolwayn преподаёт Python и Arduino и строит обучение вокруг практики:
+                    объяснить, попробовать, исправить, собрать собственный проект.
+                </p>
+                <div class="teacher-chips">
+                    <span>Python</span>
+                    <span>Arduino</span>
+                    <span>Электроника</span>
+                    <span>Практика</span>
+                </div>
+                <div class="teacher-facts">
+                    <div><strong>Python</strong><span>от основ до проектов</span></div>
+                    <div><strong>Arduino</strong><span>от схемы до устройства</span></div>
+                </div>
+                <a class="text-button" href="#faq">Частые вопросы →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+        <div class="container faq-wrap">
+            <div>
+                <span class="section-label">Вопросы</span>
+                <h2>Перед стартом</h2>
+                <p class="faq-intro">Здесь можно собрать основные ответы, которые обычно нужны перед выбором курса.</p>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>Нужно ли уметь программировать заранее?<i class="bx bx-chevron-down"></i></summary>
+                    <p>Для стартовых направлений можно начинать с базового уровня. Конкретные требования лучше указать на странице каждого курса.</p>
+                </details>
+                <details>
+                    <summary>Можно ли задавать вопросы преподавателю?<i class="bx bx-chevron-down"></i></summary>
+                    <p>Да. На странице курса можно будет указать формат обратной связи и способ связи с преподавателем.</p>
+                </details>
+                <details>
+                    <summary>Что понадобится для обучения?<i class="bx bx-chevron-down"></i></summary>
+                    <p>Для Python и JavaScript достаточно компьютера. Для Arduino дополнительно понадобится комплект платы и компонентов.</p>
+                </details>
+                <details>
+                    <summary>Можно ли изучать несколько направлений?<i class="bx bx-chevron-down"></i></summary>
+                    <p>Да. Начните с основной технологии, а затем добавляйте смежные направления по мере роста.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container final-cta-inner">
+            <div>
+                <span class="section-label">Skolwayn</span>
+                <h2>Выберите первое направление и начните с него.</h2>
+                <p>Без лишних сложностей: одна технология, практика и понятный следующий шаг.</p>
+            </div>
+            <a class="btn btn-primary" href="./index.html">Создать аккаунт</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-top">
+        <div class="footer-brand">
+            <a class="brand dark-brand" href="#top">
+                <span class="brand-icon">S</span>
+                <span>Skolwayn</span>
+            </a>
+            <p>Онлайн-школа программирования для тех, кто хочет учиться через практику.</p>
+        </div>
+        <div class="footer-col">
+            <strong>Обучение</strong>
+            <a href="#courses">Python</a>
+            <a href="#courses">JavaScript</a>
+            <a href="#courses">React</a>
+            <a href="#courses">Arduino</a>
+        </div>
+        <div class="footer-col">
+            <strong>Skolwayn</strong>
+            <a href="#teacher">Преподаватель</a>
+            <a href="#format">Как учимся</a>
+            <a href="#faq">Вопросы</a>
+        </div>
+        <div class="footer-col">
+            <strong>Аккаунт</strong>
+            <a href="./login.html">Войти</a>
+            <a href="./index.html">Регистрация</a>
+        </div>
+    </div>
+    <div class="container footer-bottom">
+        <span>© <span id="year"></span> Skolwayn</span>
+        <span>Онлайн-обучение программированию</span>
+    </div>
+</footer>
+
+<script src="./main.js"></script>
+</body>
+</html>

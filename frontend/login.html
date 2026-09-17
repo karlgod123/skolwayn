@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Skolwayn — Вход</title>
+    <style>
+        .login-card { width: min(440px, 100%); }
+        .login-card .form-header { margin-bottom: 22px; }
+        .login-note { margin-top: 12px; text-align: center; color: rgba(255,255,255,.45); font-size: 12px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <canvas id="painting"></canvas>
+    <div class="background-overlay"></div>
+
+    <main class="page">
+        <div class="wrapper login-card">
+            <div class="logo">
+                <span class="logo-icon">S</span>
+                <span>Skolwayn</span>
+            </div>
+
+            <div class="form-header">
+                <h1>С возвращением</h1>
+                <p>Войдите, чтобы продолжить обучение</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="container-group">
+                    <label for="loginEmail">Электронная почта</label>
+                    <div class="input-box">
+                        <i class="bx bx-envelope"></i>
+                        <input id="loginEmail" type="email" placeholder="example@mail.ru" required>
+                    </div>
+                </div>
+
+                <div class="container-group">
+                    <label for="loginPassword">Пароль</label>
+                    <div class="input-box">
+                        <i class="bx bx-lock"></i>
+                        <input id="loginPassword" type="password" placeholder="Пароль" required>
+                    </div>
+                </div>
+
+                <button class="submit-btn" type="submit">Войти</button>
+                <p id="loginMessage" class="login-note">
+                    Backend-авторизация будет подключена отдельно. Сейчас это интерфейс входа.
+                </p>
+            </form>
+
+            <div class="divider"><span>или</span></div>
+            <div class="register-link">
+                <p>Нет аккаунта?</p>
+                <a href="./index.html">Создать</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const form = document.querySelector('#loginForm');
+        const message = document.querySelector('#loginMessage');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            message.textContent = 'Форма готова. Подключим её к /login, когда добавим backend-авторизацию.';
+            message.style.color = '#c5b9ff';
+        });
+    </script>
+</body>
+</html>
